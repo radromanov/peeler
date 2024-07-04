@@ -22,6 +22,8 @@
     "typescript": "^5.5.2"
   },
   "__moduleAliases": {
-    "@": "src/*"
+    "@shared": "src/shared/*",
+    "@core": "src/core/*",
+    "@infrastructure": "src/infrastructure/*"
   }
 }
