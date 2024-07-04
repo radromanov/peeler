@@ -1,16 +1,25 @@
 {
-  "name": "peeler",
+  "name": "jobby",
   "version": "1.0.0",
-  "description": "Word scraper CLI tool.",
+  "description": "Job scraper CLI tool.",
   "main": "dist/index.js",
   "author": {
     "name": "Radostin Romanov",
     "url": "https://github.com/radromanov"
   },
   "license": "MIT",
+  "bin": {
+    "jobby": "./dist/index.js"
+  },
   "scripts": {
-    "build": "tsc",
-    "dev": "rimraf dist && pnpm build && node -r tsconfig-paths/register dist/index.js"
+    "chmod": "chmod +x ./dist/index.js",
+    "link:cli": "(pnpm uninstall --global jobby || true) && pnpm chmod && pnpm link --global",
+    "dev": "rimraf dist && tsc"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "postgres": "^3.4.4",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/module-alias": "^2.0.4",
@@ -21,12 +30,8 @@
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.5.2"
   },
-  "__moduleAliases": {
-    "@api": "src/api/*",
-    "@lib": "src/lib/*"
-  },
-  "dependencies": {
-    "postgres": "^3.4.4",
-    "zod": "^3.23.8"
+  "_moduleAliases": {
+    "@api": "dist/api",
+    "@lib": "dist/lib"
   }
 }
