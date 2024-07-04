@@ -22,8 +22,11 @@
     "typescript": "^5.5.2"
   },
   "__moduleAliases": {
-    "@shared": "src/shared/*",
-    "@core": "src/core/*",
-    "@infrastructure": "src/infrastructure/*"
+    "@api": "src/api/*",
+    "@lib": "src/lib/*"
+  },
+  "dependencies": {
+    "postgres": "^3.4.4",
+    "zod": "^3.23.8"
   }
 }

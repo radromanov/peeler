@@ -13,9 +13,8 @@
 
     "baseUrl": "./src",
     "paths": {
-      "@shared/*": ["./shared/*"],
-      "@core/*": ["./core/*"],
-      "@infrastructure/*": ["./infrastructure/*"]
+      "@api/*": ["./api/*"],
+      "@lib/*": ["./lib/*"]
     },
 
     "noImplicitAny": true,
