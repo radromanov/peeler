@@ -14,7 +14,7 @@
   "scripts": {
     "chmod": "chmod +x ./dist/index.js",
     "link:cli": "(pnpm uninstall --global jobby || true) && pnpm chmod && pnpm link --global",
-    "dev": "rimraf dist && tsc"
+    "dev": "rimraf dist && tsc -w"
   },
   "dependencies": {
     "commander": "^12.1.0",
