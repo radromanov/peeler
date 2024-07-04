@@ -1,0 +1,27 @@
+{
+  "name": "peeler",
+  "version": "1.0.0",
+  "description": "Word scraper CLI tool.",
+  "main": "dist/index.js",
+  "author": {
+    "name": "Radostin Romanov",
+    "url": "https://github.com/radromanov"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "rimraf dist && pnpm build && node -r tsconfig-paths/register dist/index.js"
+  },
+  "devDependencies": {
+    "@types/module-alias": "^2.0.4",
+    "@types/node": "^20.14.9",
+    "module-alias": "^2.2.3",
+    "rimraf": "^5.0.7",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.5.2"
+  },
+  "__moduleAliases": {
+    "@": "src/*"
+  }
+}
